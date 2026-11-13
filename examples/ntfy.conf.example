@@ -1,0 +1,4 @@
+# Private runtime config; do not commit your real topic.
+# Leave empty to disable both ntfy extensions. Choose a private, hard-to-guess
+# topic yourself before using ntfy.sh. This file is parsed, never executed.
+NTFY_TOPIC=

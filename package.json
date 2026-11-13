@@ -1,0 +1,30 @@
+{
+  "name": "pi-workstation-extensions",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local clock, footer, reminders, ntfy notifications and Markdown conversation export for Pi",
+  "type": "module",
+  "engines": { "node": ">=22.19.0" },
+  "keywords": ["pi-package"],
+  "files": ["extensions", "examples", "docs", "README.md", "CHANGELOG.md", "tests"],
+  "pi": {
+    "extensions": [
+      "./extensions/clock-timestamps.ts",
+      "./extensions/footer.ts",
+      "./extensions/mode.ts",
+      "./extensions/ntfy-notify.ts",
+      "./extensions/ntfy-send.ts",
+      "./extensions/pi-conversation-sync.ts",
+      "./extensions/reminders.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*",
+    "typebox": "*"
+  },
+  "scripts": {
+    "test": "node tests/extensions.mjs && node tests/conversation-sync.mjs",
+    "test:types": "node tests/typecheck.mjs"
+  }
+}

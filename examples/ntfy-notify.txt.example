@@ -1,0 +1,52 @@
+# All automatic notifications are disabled until explicitly enabled here.
+# Automatic sending also requires /ntfy phone and a private NTFY_TOPIC.
+# Available substitutions depend on the event: {cwd}, {kind}, {tool}.
+# Including {cwd} sends a local filesystem path to the notification server.
+
+[agent_start]
+enabled=false
+emoji=▶
+title=Pi started
+message=Pi is working.
+tags=computer
+priority=3
+
+[ui_prompt_start]
+enabled=false
+emoji=🔔
+title=Pi needs input
+message=An interactive prompt is waiting ({kind}).
+tags=question
+priority=3
+
+[tool_error]
+enabled=false
+emoji=⚠
+title=Pi tool failed
+message=Tool {tool} reported an error.
+tags=warning
+priority=3
+
+[agent_question]
+enabled=false
+emoji=❓
+title=Pi has a question
+message=Please review the response.
+tags=question
+priority=3
+
+[agent_finished]
+enabled=false
+emoji=✓
+title=Pi finished
+message=The agent has settled.
+tags=computer
+priority=3
+
+[agent_interrupted]
+enabled=false
+emoji=⏹
+title=Pi interrupted
+message=The run was aborted.
+tags=computer
+priority=3
